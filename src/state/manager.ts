@@ -1,7 +1,7 @@
 import { RecordWithPlaintext } from '@puzzlehq/sdk';
 import { Answer } from './RecordTypes/wheres_alex_vxxx';
 
-export const GAME_PROGRAM_ID = 'wheres_joe_v018.aleo';
+export const GAME_PROGRAM_ID = 'wheres_alex_v018.aleo';
 
 export const GAME_FUNCTIONS = {
   propose_game: 'propose_game',
@@ -13,11 +13,11 @@ export const GAME_FUNCTIONS = {
 
 /// todo - update these
 export const transitionFees = {
-  propose_game: 1.01608,
-  accept_game: 1.02901,
-  submit_wager: 1.0086,
-  reveal_answer: 1.009,
-  finish_game: 1.0065,
+  propose_game: 0.01608,
+  accept_game: 0.02901,
+  submit_wager: 0.0086,
+  reveal_answer: 0.009,
+  finish_game: 0.0065,
 };
 
 export type LoadingStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -57,9 +57,9 @@ export type AcceptGameInputs = {
   game_record: RecordWithPlaintext;
   opponent_answer: '0field' | '1field';
   opponent_answer_readable: Answer;
-  piece_prudens_challenger: RecordWithPlaintext;
+  piece_stake_challenger: RecordWithPlaintext;
   piece_claim_challenger: RecordWithPlaintext;
-  piece_prudens_opponent: RecordWithPlaintext;
+  piece_stake_opponent: RecordWithPlaintext;
   piece_claim_opponent: RecordWithPlaintext;
   block_ht: string;
 };
@@ -67,13 +67,13 @@ export type AcceptGameInputs = {
 export type RevealAnswerInputs = {
   reveal_answer_notification_record: RecordWithPlaintext;
   challenger_answer_record: RecordWithPlaintext;
-  joint_piece_prudens: RecordWithPlaintext;
+  joint_piece_stake: RecordWithPlaintext;
   challenger_claim_signature: RecordWithPlaintext;
 };
 
 export type FinishGameInputs = {
   game_record: RecordWithPlaintext;
   joint_piece_winner: RecordWithPlaintext;
-  piece_joint_prudens: RecordWithPlaintext;
+  piece_joint_stake: RecordWithPlaintext;
   joint_piece_time_claim: RecordWithPlaintext;
 };
