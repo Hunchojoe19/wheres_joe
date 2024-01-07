@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import behindBuildingImg from '../assets/behind_building.svg';
-import inWeedsImg from '../assets/in_weeds.jpg';
+import behindBuildingImg from '../assets/house.jpg';
+import inWeedsImg from '../assets/woods.jpg';
 import { Answer } from '@state/RecordTypes/wheres_alex_vxxx.js';
 
 type SelectedAlexLocationProps = {
@@ -29,7 +29,7 @@ function SelectedAlexLocation({ answer, win }: SelectedAlexLocationProps) {
                             : 'text-primary-white'
                         }`}
           >
-            In the Weeds
+            In the Woods
           </div>
         )}
       </div>
@@ -62,7 +62,7 @@ function SelectedAlexLocation({ answer, win }: SelectedAlexLocationProps) {
                             : 'text-primary-white'
                         }`}
           >
-            Behind the Building
+            Inside the House
           </div>
         )}
       </div>

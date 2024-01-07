@@ -2,8 +2,8 @@ import { RecordWithPlaintext, zodAddress } from '@puzzlehq/sdk';
 import { z } from 'zod';
 
 export enum Answer {
-  InTheWeeds = 'In the Weeds',
-  BehindTheBuilding = 'Behind the Building',
+  InTheWeeds = 'In the Woods',
+  BehindTheBuilding = 'Inside the House',
 }
 
 export const getAnswer = (answer: '0field' | '1field') =>
