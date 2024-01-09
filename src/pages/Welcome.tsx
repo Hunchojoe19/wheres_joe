@@ -20,16 +20,16 @@ export const Welcome = () => {
   return (
     <div className='flex h-full w-full items-stretch justify-between'>
       <div className='relative flex h-full w-full flex-col items-center justify-center'>
-        <img
+        {/* <img
           src={rightImageSrc}
           alt='Top-right Alex'
           className='fixed right-0 top-0 h-full max-h-[18rem] max-w-[50%] object-contain'
-        />
-        <img
+        /> */}
+        {/* <img
           src={leftImageSrc}
           alt='Left Alex'
           className='fixed left-0 top-1/4 h-full max-h-[20rem] max-w-[50%] -translate-y-20 object-contain'
-        />
+        /> */}
         <h1 className='text-24xl z-10 max-w-full overflow-visible whitespace-nowrap text-center font-extrabold leading-[40.56px] tracking-tight text-primary-white animate-bounce'>
           WHERE'S
           <br />
@@ -50,7 +50,7 @@ export const Welcome = () => {
         <img
           src={bottomImageSrc}
           alt='Bottom Alex'
-          className='center -translate-y-100 fixed bottom-0 h-full max-h-[12rem] w-3/5 max-w-[35%] transform object-contain'
+          className='center -translate-y-100 fixed bottom-0 h-full max-h-[12rem] w-full max-w-full transform object-contain'
         />
       </div>
     </div>
