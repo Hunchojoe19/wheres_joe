@@ -5,6 +5,25 @@ import bottomImageSrc from '../assets/eerie.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Button from '@components/Button.js';
+import { motion } from 'framer-motion';
+
+
+const welcomeVariants = {
+  hidden: {
+    opacity: 0,
+    y: "-100vh"
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      type: "spring",
+      stiffness: 120
+    }
+    
+  }
+}
 
 export const Welcome = () => {
   const navigate = useNavigate();
@@ -18,7 +37,7 @@ export const Welcome = () => {
   }, [account, navigate]);
 
   return (
-    <div className='flex h-full w-full items-stretch justify-between'>
+    <motion.div className='flex h-full w-full items-stretch justify-between'>
       <div className='relative flex h-full w-full flex-col items-center justify-center'>
         {/* <img
           src={rightImageSrc}
@@ -53,6 +72,6 @@ export const Welcome = () => {
           className='center -translate-y-100 fixed bottom-0 h-full max-h-[12rem] w-full max-w-full transform object-contain'
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
