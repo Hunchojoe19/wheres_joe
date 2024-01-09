@@ -44,7 +44,7 @@ function Home() {
       <div className='mt-4 px-4 pb-4 text-center'>
         {' '}
         {/* Adding px-4 back here to maintain padding for the bottom button */}
-        <Button color='blue' size='sm'>
+        <Button color='blue' size='sm' className='animate-bounce'>
           Past Games
         </Button>
       </div>
