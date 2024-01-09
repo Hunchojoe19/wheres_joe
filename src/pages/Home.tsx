@@ -23,6 +23,7 @@ function Home() {
         <TotalWinnings amount={totalBalance} />
         <Button
           color='yellow'
+          className='hover:text-gray-800'
           onClick={() => {
             if (!account) return;
             initialize(account?.address);

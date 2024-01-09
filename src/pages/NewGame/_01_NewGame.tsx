@@ -5,6 +5,33 @@ import Button from '@components/Button';
 import { useAccount } from '@puzzlehq/sdk';
 import { aleoAddressRegex } from '../../utils.js';
 import { Step, useNewGameStore } from './store.js';
+import { motion } from 'framer-motion';
+
+
+
+const pageVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-100vw",
+    scale: 0.8
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      mass: 0.4,
+      damping: 8,
+      when: "beforeChildren",
+      staggerChildren: 0.4
+    }
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" }
+}
+}
 
 function NewGame() {
   const [inputs, setInputs, setStep] = useNewGameStore((state) => [
@@ -17,7 +44,12 @@ function NewGame() {
   const opponent = inputs?.opponent;
 
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-2 px-5'>
+    <motion.div className='flex h-full w-full flex-col items-center justify-between gap-2 px-5'
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Nav step={1} />
       <PageHeader
         text='WHO WOULD YOU LIKE TO CHALLENGE?'
@@ -47,7 +79,7 @@ function NewGame() {
       >
         NEXT
       </Button>
-    </div>
+    </motion.div>
   );
 }
 

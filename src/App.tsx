@@ -40,7 +40,7 @@ function App() {
           <Rerouter />
           <div className='flex w-full max-w-screen-sm flex-col overflow-y-auto shadow-md'>
             {account && account?.address && <AppHeader />}
-            <div className='h-full w-full max-w-screen-sm p-4'>
+            <div className='h-full w-full max-w-screen-lg p-8'>
               <Routes>
                 <Route index element={account ? <Home /> : <Welcome />} />
                 <Route path='/new-game' element={<NewGame />} />
