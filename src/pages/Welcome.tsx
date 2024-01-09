@@ -38,7 +38,6 @@ const imgVariants = {
     x: 0,
     transition: {
       duration: 1,
-      delay: 0.5,
       type: "spring",
       stiffness: 120
     }
