@@ -1,7 +1,7 @@
 import { useConnect, useAccount } from '@puzzlehq/sdk';
 import rightImageSrc from '../assets/charles.jpg';
 import leftImageSrc from '../assets/godfather.jpg';
-import bottomImageSrc from '../assets/hacker.jpg';
+import bottomImageSrc from '../assets/eerie.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Button from '@components/Button.js';
