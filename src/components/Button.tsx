@@ -22,7 +22,8 @@ const buttonVariants = {
     scale: 1.1,
     transition: {
       duration: 0.3,
-      repeat: Infinity
+      repeat: Infinity,
+      ease: "easeInOut"
     }
   }
 }

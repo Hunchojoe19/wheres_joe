@@ -69,7 +69,7 @@ export const Welcome = () => {
         <img
           src={bottomImageSrc}
           alt='Bottom Alex'
-          className='center -translate-y-100 fixed bottom-0 h-full max-h-[12rem] w-full max-w-full transform object-contain'
+          className='center -translate-y-100 fixed bottom-0 h-full max-h-[12rem] w-3/5 max-w-[35%] transform object-contain'
         />
       </div>
     </motion.div>
